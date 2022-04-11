@@ -1,0 +1,31 @@
+Extract Transform Load (ETL) Lab
+Estimated time needed: 30 minutes
+
+Objectives
+After completing this lab you will be able to:
+
+Read CSV and JSON file types.
+Extract data from the above file types.
+Transform data.
+Save the transformed data in a ready-to-load format which data engineers can use to load into an RDBMS.
+Import the required modules and functions
+
+<
+import glob                         # this module helps in selecting files 
+import pandas as pd                 # this module helps in processing CSV files
+import xml.etree.ElementTree as ET  # this module helps in processing XML files.
+from datetime import datetime
+>
+
+Download Files
+<
+!wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0221EN-SkillsNetwork/labs/module%206/Lab%20-%20Extract%20Transform%20Load/data/source.zip
+>
+
+Unzip Files
+<
+tmpfile    = "temp.tmp"               # file used to store all extracted data
+logfile    = "logfile.txt"            # all event logs will be stored in this file
+targetfile = "transformed_data.csv"   # file where transformed data is stored
+>
+
